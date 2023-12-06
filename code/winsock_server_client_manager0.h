@@ -17,6 +17,9 @@
 uint8_t winsock_initialization();
 void winsock_free();
 
+//TO CALL ALL OF THE FUNCTIONS IN THIS LIBRARY (except "convert_IPv4_from_string_to_uint32()")
+//U MUST CALL FUNCTION "winsock_initialization()" and after work to clear memory u can call "winsock_free()";
+
 struct Winsock_server_structure
 {
     SOCKET listen_socket = INVALID_SOCKET;
