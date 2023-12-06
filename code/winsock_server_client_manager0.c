@@ -176,14 +176,14 @@ int64_t Winsock_server::recv_from_client_force(uint8_t* const data_out,const uin
         else
         {
             #ifdef WINSOCK_SERVER_CLIENT_DEBUG
-            printf("    returned %zd after %zd attempts\n\n",total_counter,i);
+            printf("    returned %u after %u attempts\n\n",total_counter,i);
             #endif
             return total_counter;
         }
 
     }
     #ifdef WINSOCK_SERVER_CLIENT_DEBUG
-    printf("    returned %zd after %zd attempts\n\n",total_counter,amount_of_extra_attempts_to_force);
+    printf("    returned %u after %u attempts\n\n",total_counter,amount_of_extra_attempts_to_force);
     #endif
     return total_counter;
 }
@@ -233,13 +233,13 @@ int64_t Winsock_server::send_to_client_force(const uint8_t* const data_in,const 
         else
         {
             #ifdef WINSOCK_SERVER_CLIENT_DEBUG
-            printf("    returned %zd after %zd attempts\n\n",total_counter,i);
+            printf("    returned %u after %u attempts\n\n",total_counter,i);
             #endif
             return total_counter;
         }
     }
     #ifdef WINSOCK_SERVER_CLIENT_DEBUG
-    printf("    returned %zd after %zd attempts\n\n",total_counter,amount_of_extra_attempts_to_force);
+    printf("    returned %u after %u attempts\n\n",total_counter,amount_of_extra_attempts_to_force);
     #endif
     return total_counter;
 }
@@ -478,14 +478,14 @@ int64_t Winsock_client::recv_from_server_force(uint8_t* const data_out,const uin
         else
         {
             #ifdef WINSOCK_SERVER_CLIENT_DEBUG
-            printf("    returned %zd after %zd attempts\n\n",total_counter,i);
+            printf("    returned %u after %u attempts\n\n",total_counter,i);
             #endif
             return total_counter;
         }
 
     }
     #ifdef WINSOCK_SERVER_CLIENT_DEBUG
-    printf("    returned %zd after %zd attempts\n\n",total_counter,amount_of_extra_attempts_to_force);
+    printf("    returned %u after %u attempts\n\n",total_counter,amount_of_extra_attempts_to_force);
     #endif
     return total_counter;
 }
@@ -535,13 +535,13 @@ int64_t Winsock_client::send_to_server_force(const uint8_t* const data_in,const 
         else
         {
             #ifdef WINSOCK_SERVER_CLIENT_DEBUG
-            printf("    returned %zd after %zd attempts\n\n",total_counter,i);
+            printf("    returned %u after %u attempts\n\n",total_counter,i);
             #endif
             return total_counter;
         }
     }
     #ifdef WINSOCK_SERVER_CLIENT_DEBUG
-    printf("    returned %zd after %zd attempts\n\n",total_counter,amount_of_extra_attempts_to_force);
+    printf("    returned %u after %u attempts\n\n",total_counter,amount_of_extra_attempts_to_force);
     #endif
     return total_counter;
 }
@@ -769,7 +769,7 @@ uint8_t get_public_IPv4(uint8_t* const representation_of_string_data_out,uint32_
     }
 
     #ifdef WINSOCK_SERVER_CLIENT_DEBUG
-    printf("    successively received: %zd.%zd.%zd.%zd\n\n",*((uint8_t*)representation_of_int_data_out),
+    printf("    successively received: %u.%u.%u.%u\n\n",*((uint8_t*)representation_of_int_data_out),
            *((uint8_t*)representation_of_int_data_out+1),*((uint8_t*)representation_of_int_data_out+2),
            *((uint8_t*)representation_of_int_data_out+3));
     #endif
